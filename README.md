@@ -1,6 +1,6 @@
 # ICLR 2024: Exploring Diffusion Time-steps for Unsupervised Representation Learning (DiTi)
 
-Official PyTorch implementation of our ICLR 2024 paper. The code can be used to learn image representation in an unsupervised fashion on CelebA, FFHQ or Bedroom dataset. The learned representation enables counterfactual generation and manipulation. This repository is adapted from the PyTorch implementation of [PDAE](https://arxiv.org/abs/2212.12990).
+Official PyTorch implementation of our [ICLR 2024 paper](https://arxiv.org/pdf/2401.11430.pdf). The code can be used to learn image representation in an unsupervised fashion on CelebA, FFHQ or Bedroom dataset. The learned representation enables counterfactual generation and manipulation. This repository is adapted from the PyTorch implementation of [PDAE](https://arxiv.org/abs/2212.12990).
 ```
 @inproceedings{yue2024exploring,
   title={Exploring Diffusion Time-steps for Unsupervised Representation Learning},
