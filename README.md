@@ -1,6 +1,14 @@
 # ICLR 2024: Exploring Diffusion Time-steps for Unsupervised Representation Learning (DiTi)
 
-This repository is adapted from the PyTorch implementation of [PDAE](https://arxiv.org/abs/2212.12990).
+Official PyTorch implementation of our ICLR 2024 paper. The code can be used to learn image representation in an unsupervised fashion on CelebA, FFHQ or Bedroom dataset. The learned representation enables counterfactual generation and manipulation. This repository is adapted from the PyTorch implementation of [PDAE](https://arxiv.org/abs/2212.12990).
+```
+@inproceedings{yue2024exploring,
+  title={Exploring Diffusion Time-steps for Unsupervised Representation Learning},
+  author={Yue, Zhongqi and Wang, Jiankun and Sun, Qianru and Ji, Lei and Chang, Eric I and Zhang, Hanwang},
+  booktitle={ICLR},
+  year={2024}
+}
+```
 
 ## Dataset
 
@@ -86,21 +94,6 @@ cd ./trainer
 python train_representation_learning.py --config_path=../config/celeba64/diti64.yml --run_path=../runs --method=diti -n=1 -g=2 -nr=0
 ```
 
-
-
-
-
-
-
-To train a latent DPM, run this command:
-
-```
-cd ./trainer
-CUDA_VISIBLE_DEVICES=0,1,2,3 python3 train_latent_diffusion.py --world_size 4
-```
-
-
-
 You can change the config file and run path in the python file.
 
 
@@ -134,5 +127,7 @@ Modular manipulation on a CelebA attribute (e.g., index 25) by setting ProbMask 
 cd ./eval
 python manipulation.py --ckpt_root=../runs/celeba64/diti --ckpt_name=latest --device=0 --ema --promask=16 --epochs=10 --attr_idx=25
 ```
+
+## Examples
 
 Please refer to notebooks folder for more hands-on examples on interpolation and manipulation.
